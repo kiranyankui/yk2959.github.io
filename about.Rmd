@@ -1,0 +1,70 @@
+---
+title: "About me"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+__Education__
+
+* COLUMBIA UNIVERSITY MAILMAN SCHOOL OF PUBLIC HEALTH, Master of Public Health (MPH), Department of Epidemiology, expected May 2023
+
+* Certificate in Applied Biostatistics and Public Health Data Science
+
+__Relevant courses__
+
+*Epidemiology*
+
+* EPID P8400 Principles of Epidemiology III: Applied Epidemiologic Analysis
+* EPID P8438: Design and Conduct of Observational Epidemiology
+* EPID P8483: Applications of Epidemiologic Research Methods
+
+*Biostatistics*
+
+* BIST P8105: Data Science I 
+* BIST 8100: Applied Regression
+* BIST 8110: Applied Regression II
+* BIST 8120: Analysis of Categorical Data
+
+__Relevant Experience__
+
+__NYU LANGONE HEALTH SECTION FOR HEALTH EQUITY, Health Disparities Research Intern__
+
+* Lead a needs assessment report through analysis of harmonized data relating to food-related needs in the Asian American and Pacific Islander community across multiple cities across the United States 
+
+* Spearheaded a mini review on an innovative device measuring skin carotenoid levels and explored implications in community-based participatory research
+
+* Developed a Community Supported Agriculture (CSA) Program by conducting mixed-methods, community-based participatory research methods to engage directly with the Chinese immigrant community members in Brooklyn
+
+* Advance program objectives associated with a 20-week Community Supported Agriculture (CSA) Program by data collection, in-person support, and translation 
+
+
+__COLUMBIA UNIVERSITY IRVING MEDICAL CENTER, DIVISION OF INFECTIOUS DISEASES, HIV Prevention Research Intern__ 
+
+* Lead the development of a scoping review protocol of HIV prevention intervention for integration of novel HIV pre-exposure prophylaxis for US women
+
+* Performed literature review of over 1200 peer-reviewed publications in six scientific databases to improve the evidence base of HIV vulnerabilities in at-risk women in the US
+
+* Collaborated with a multi-disciplinary research team to enable the successful implementation of databases searches
+
+
+__NATIONAL UNIVERSITY OF SINGAPORE, SCHOOL OF PUBLIC HEALTH, Researcher__
+
+* Pioneered the first global report on physical activity in Singaporean children and adolescents by independently conducting a literature review of all relevant national publications over 10 years, managing, analyzing data and manuscript-writing 
+
+* Developed effective search strategies, and conducted literature review and data analysis of over 1,000 peer-reviewed publications in both English and Chinese for a systematic review examining correlates of sedentary behavior in children in Asia 
+
+* Managed and analyzed data for a large-scale nationally representative cohort study using statistical programming tools 
+
+* Independently managed the recruitment and coordination of 300 participants 
+
+* Conducted over 130 qualitative and quantitative multilingual interviews 
+
+
+
+
+
+
+
+

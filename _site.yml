@@ -1,0 +1,20 @@
+name: "Yay internet!"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "About"
+      href: about.html
+    - text: "Interests"
+      href: interests.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<yk2959@cumc.columbia.edu>
+    - icon: fa-github fa-lg
+      href: http://github.com/kiranyankui/
+    - icon: fa-brands fa-linkedin
+      href: https://www.linkedin.com/in/kiranyankui/
+    - icon: fa-solid fa-snowflake
+      href: noaa.html
+output:
+  html_document:
+    theme: cerulean

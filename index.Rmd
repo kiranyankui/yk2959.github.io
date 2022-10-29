@@ -1,0 +1,29 @@
+---
+title: "Kiran Kui's website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Introduction
+
+Welcome to the introductory landing page of Kiran Kui, as she explores the intricacies of the data science world. 
+
+Kiran is a current Master of Public Health (MPH) Candidate at Columbia University and Public Health Researcher who is passionate about applying quantitative research methods to shape existing health systems and improve health equity. 
+
+![](photo/photo_kiran.png)
+
+# Links
+
+Here are links to some of my favourite websites.
+
+* [LinkedIn](https://www.linkedin.com/in/kiranyankui/)
+
+# Link to pages within this site
+
+* [About me](about.html)
+* [Interests](interests.html)
+
+
+

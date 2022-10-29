@@ -1,0 +1,25 @@
+---
+title: "Interests"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+__Interests__
+
+* Travelling 
+
+![](photo/nz_rock.jpg)
+*On top of a gigantic rock in a beach in New Zealand*
+
+* Broadway
+
+* Brazilian Jiu-Jitsu
+
+* Cats(??)
+
+![](photo/cat.jpg)
+*Getting some much needed cat therapy*
+
+
