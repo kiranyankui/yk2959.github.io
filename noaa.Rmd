@@ -5,3 +5,76 @@ output:
     toc: true
     toc_float: true
 ---
+
+# Introduction to the dataset
+
+We want to explore the NYC NOAA Dataset. The National Oceanic and Atmospheric Association (NOAA) of the National Centers for Environmental Information (NCEI) provides public access to some weather data, such as, numerous daily variables, including maximum and minimum temperature, total daily precipitation, snowfall, and snow depth. 
+
+These data were accessed from the [NOAA National Climatic Data Center](http://doi.org/10.7289/V5D21VHZ) on August 15, 2017. 
+
+```{r}
+library(tidyverse)
+library(dplyr)
+library(plotly)
+library(p8105.datasets)
+data("ny_noaa")
+
+```
+I loaded relevant libraries.
+
+# Scatterplot 
+
+```{r scatterplot}
+
+ny_noaa = ny_noaa %>% 
+  janitor::clean_names() %>%
+  separate(date, into = c("year", "month", "day"), sep = '-') %>%
+  drop_na(prcp, tmax, tmin, snow, snwd) %>% 
+  mutate(tmax = as.numeric(tmax),
+         tmin = as.numeric(tmin),
+         tmax_c = tmax/10,
+         tmin_c = tmin/10,
+         prcp_mm = prcp/10,
+         month = recode(month, "01" = "January", "02" = "February", "03" = "March", "04" = "April", "05" = "May", "06" = "June", "07" = "July", "08" = "August", "09" = "September", "10" = "October", "11" = "November", "12" = "December")) 
+
+avg_max_temp_Jan = ny_noaa %>%  
+  group_by(id, month, year) %>% 
+  filter (month=="January") %>% 
+   summarize (average_tmax = mean(tmax_c), na.rm=TRUE) 
+
+avg_max_temp_Jan %>%
+  plot_ly(
+    x = ~year, y = ~average_tmax, type = "scatter", mode = "markers", alpha = 0.5)
+
+```
+I created a plotly scatterplot showing the average maximum temperature in January in each station across years. 
+
+# Barplot
+```{r barplot}
+avg_max_temp_month = ny_noaa %>%  
+  filter(year == "1994") %>% 
+  mutate(month = factor(month, levels = month.name)) %>%
+  arrange(month) %>% 
+  group_by(month) %>% 
+  summarize (average_tmax = mean(tmax_c), na.rm=TRUE) 
+
+avg_max_temp_month %>%  
+  plot_ly(x = ~month, y = ~average_tmax, color = ~month, type = "bar", colors = "viridis")
+
+```
+I created a plotly barplot showing the average maximum temperature for each month in 1994. 
+
+# Boxplot 
+```{r boxplot}
+max_temp_month_2007 = ny_noaa %>% 
+  filter(year == "1994") %>% 
+   group_by(month, id, tmax_c) %>% 
+  summarise()
+
+max_temp_month_2007 %>%  
+  mutate(month = factor(month, levels = month.name)) %>%
+  arrange(month) %>% 
+  plot_ly(y = ~tmax_c, color = ~month, type = "box", colors = "viridis")
+```
+I created a plotly boxplot showing the range of values for the average maximum temperature for each month in 1994. 
+
