@@ -27,7 +27,7 @@ Here are links to some of my favourite websites.
 * [Interests](interests.html)
 * [NY NOAA](noaa.html)
 
-# Current Mood
+# Playlist
 
-<iframe src="https://youtu.be/TYGkHWU8NdQ" data-external= "1" > </iframe>
+* [Spotify](https://open.spotify.com/playlist/2nI2TA9KrHvlcrZWH5xPbz?si=f824951708544417)
 
