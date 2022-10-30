@@ -8,7 +8,7 @@ output:
 
 __Education__
 
-* COLUMBIA UNIVERSITY MAILMAN SCHOOL OF PUBLIC HEALTH, Master of Public Health (MPH), Department of Epidemiology, expected May 2023
+* [COLUMBIA UNIVERSITY MAILMAN SCHOOL OF PUBLIC HEALTH, Master of Public Health (MPH)](https://www.publichealth.columbia.edu/), Department of Epidemiology, expected May 2023
 
 * Certificate in Applied Biostatistics and Public Health Data Science
 
