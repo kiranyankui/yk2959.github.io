@@ -19,4 +19,4 @@ navbar:
       href: noaa.html
 output:
   html_document:
-    theme: cerulean
+    theme: readable
