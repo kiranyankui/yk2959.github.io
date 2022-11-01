@@ -1,18 +1,13 @@
 ---
-title: "NYC NOAA Dataset"
+title: "Dashboard for NY NOAA dataset"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source_code: embed
 ---
 
-# Introduction to the dataset
-
-We want to explore the NYC NOAA Dataset. The National Oceanic and Atmospheric Association (NOAA) of the National Centers for Environmental Information (NCEI) provides public access to some weather data, such as, numerous daily variables, including maximum and minimum temperature, total daily precipitation, snowfall, and snow depth. 
-
-These data were accessed from the [NOAA National Climatic Data Center](http://doi.org/10.7289/V5D21VHZ) on August 15, 2017. 
-
-```{r}
+```{r setup, include=FALSE}
 library(tidyverse)
 library(dplyr)
 library(plotly)
@@ -20,12 +15,8 @@ library(p8105.datasets)
 data("ny_noaa")
 
 ```
-I loaded relevant libraries.
 
-# Scatterplot 
-
-```{r scatterplot}
-
+```{r}
 ny_noaa = ny_noaa %>% 
   janitor::clean_names() %>%
   separate(date, into = c("year", "month", "day"), sep = '-') %>%
@@ -42,16 +33,6 @@ avg_max_temp_Jan = ny_noaa %>%
   filter (month=="January") %>% 
    summarize (average_tmax = mean(tmax_c), na.rm=TRUE) 
 
-avg_max_temp_Jan %>%
-  plot_ly(
-    x = ~year, y = ~average_tmax, type = "scatter", mode = "markers", alpha = 0.5) %>% 
-  layout(title = 'Scatterplot showing average maximum temperature in January')
-
-```
-I created a plotly scatterplot showing the average maximum temperature in January in each station across years. 
-
-# Barplot
-```{r barplot}
 avg_max_temp_month = ny_noaa %>%  
   filter(year == "1994") %>% 
   mutate(month = factor(month, levels = month.name)) %>%
@@ -59,19 +40,36 @@ avg_max_temp_month = ny_noaa %>%
   group_by(month) %>% 
   summarize (average_tmax = mean(tmax_c), na.rm=TRUE) 
 
+max_temp_month_2007 = ny_noaa %>% 
+  filter(year == "1994") %>% 
+   group_by(month, id, tmax_c) %>% 
+  summarise()
+
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+```{r}
+
+avg_max_temp_Jan %>%
+  plot_ly(
+    x = ~year, y = ~average_tmax, type = "scatter", mode = "markers", alpha = 0.5) %>% 
+  layout(title = 'Scatterplot showing average maximum temperature in January')
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+```{r}
+
 avg_max_temp_month %>%  
   plot_ly(x = ~month, y = ~average_tmax, color = ~month, type = "bar", colors = "viridis") %>% 
   layout(title = 'Barplot showing the average maximum temperature for each month in 1994')
 
 ```
-I created a plotly barplot showing the average maximum temperature for each month in 1994. 
 
-# Boxplot 
-```{r boxplot}
-max_temp_month_2007 = ny_noaa %>% 
-  filter(year == "1994") %>% 
-   group_by(month, id, tmax_c) %>% 
-  summarise()
+```{r}
 
 max_temp_month_2007 %>%  
   mutate(month = factor(month, levels = month.name)) %>%
@@ -79,5 +77,8 @@ max_temp_month_2007 %>%
   plot_ly(y = ~tmax_c, color = ~month, type = "box", colors = "viridis") %>% 
   layout(title = 'Boxplot showing the range of values for the average maximum temperature for each month in 1994')
 ```
-I created a plotly boxplot showing the range of values for the average maximum temperature for each month in 1994. 
+
+
+
+
 
