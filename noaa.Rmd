@@ -28,7 +28,9 @@ ny_noaa = ny_noaa %>%
          tmax_c = tmax/10,
          tmin_c = tmin/10,
          prcp_mm = prcp/10,
-         month = recode(month, "01" = "January", "02" = "February", "03" = "March", "04" = "April", "05" = "May", "06" = "June", "07" = "July", "08" = "August", "09" = "September", "10" = "October", "11" = "November", "12" = "December")) 
+         month = recode(month, "01" = "January", "02" = "February", "03" = "March", "04" = "April", "05" = "May", "06" = "June", "07" = "July", "08" = "August", "09" = "September", "10" = "October", "11" = "November", "12" = "December"),
+         snow_mm = snow, 
+         snow = round(snow_mm * 0.03937 * 4) / 4)
 
 avg_max_temp_Jan = ny_noaa %>%  
   group_by(id, month, year) %>% 
