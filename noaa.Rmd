@@ -77,7 +77,7 @@ max_temp_month_2007 %>%
   mutate(month = factor(month, levels = month.name)) %>%
   arrange(month) %>% 
   plot_ly(y = ~tmax_c, color = ~month, type = "box", colors = "viridis") %>% 
-  layout(title = 'Boxplot showing average maximum temperature in 1994')
+  layout(title = 'Boxplot showing average maximum temperature for each month in 1994')
 ```
 
 
