@@ -15,8 +15,7 @@ navbar:
       href: http://github.com/kiranyankui/
     - icon: fa-brands fa-linkedin
       href: https://www.linkedin.com/in/kiranyankui/
-    - icon: fa-solid fa-snowflake
-      href: noaa.html
+
 output:
   html_document:
     theme: yeti

@@ -4,6 +4,8 @@ output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
+    source_code: embed
+
 ---
 
 ```{r setup, include=FALSE}
@@ -52,7 +54,7 @@ max_temp_month_2007 = ny_noaa %>%
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Scatterplot showing average maximum temperature in January
 
 ```{r}
 avg_max_temp_Jan %>%
@@ -64,7 +66,7 @@ avg_max_temp_Jan %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Barplot showing the average maximum temperature in 1994
 
 ```{r}
 avg_max_temp_month %>%  
@@ -72,7 +74,7 @@ avg_max_temp_month %>%
   layout(title = 'Barplot showing the average maximum temperature in 1994')
 ```
 
-### Chart C
+### Boxplot of average maximum temperature in 1994
 
 ```{r}
 max_temp_month_2007 %>%  
