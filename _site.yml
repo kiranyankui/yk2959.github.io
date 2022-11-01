@@ -7,8 +7,8 @@ navbar:
       href: about.html
     - text: "Interests"
       href: interests.html
-    - text: "NYC NOAA"
-      href: noaa.html
+    - text: "Dashboard"
+      href: dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<yk2959@cumc.columbia.edu>
     - icon: fa-github fa-lg
