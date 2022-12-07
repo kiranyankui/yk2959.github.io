@@ -72,7 +72,7 @@ maindata = left_join(deaths, gdp_population, by = c("year","location_id")) %>%
 
 
 
-### Making a dashboard lol
+### Making a dashboard 
 ```{r}
 death_country = maindata %>% 
   drop_na(country_name, location_id) %>% 
